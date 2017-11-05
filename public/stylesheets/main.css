@@ -1,0 +1,22 @@
+.thumbnail img {
+    width : 100%;
+}
+
+.thumbnail {
+    padding : 0;
+}
+
+.thumbnail .caption-full {
+    padding : 9px;
+}
+
+.well hr {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid rgba(150, 148, 148, 0.3);
+}
+
+#delete-form {
+    display : inline;
+}
