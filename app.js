@@ -10,7 +10,7 @@ var express         = require("express"),
 	Comment     	= require("./models/comment"),
 	User			= require('./models/user');
 mongoose.Promise    = global.Promise;
-mongoose.connect('mongodb://ayush3890:harshit9290@ds149535.mlab.com:49535/yelpcamp',{ useMongoClient: true });
+mongoose.connect('mongodb://ayush3890:harshit9290@ds149535.mlab.com:49535/yelpcamp');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 app.use(flash());
