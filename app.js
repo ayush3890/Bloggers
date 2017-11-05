@@ -10,8 +10,7 @@ var express         = require("express"),
 	Comment     	= require("./models/comment"),
 	User			= require('./models/user');
 mongoose.Promise    = global.Promise;
-mongoose.connect('mongodb://localhost/yelp',{ useMongoClient: true });
-
+mongoose.connect('mongodb://ayush3890:harshit9290@ds149535.mlab.com:49535/yelpcamp',{ useMongoClient: true });
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 app.use(flash());
@@ -44,6 +43,6 @@ app.use(commentRoutes);
 app.use('/campGrounds', campgroundRoutes);
 app.use(indexRoutes);
 
-app.listen("1234", function() {
+app.listen(process.env.PORT | "1234", function() {
 	console.log("Yelp Camp Server has Started");
 });
