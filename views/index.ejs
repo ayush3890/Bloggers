@@ -1,9 +1,9 @@
 <% include ./partials/header.ejs%>
 <div class="container">
 	<header class="jumbotron">
-		<h1>Welcome to YelpCamp</h1>
-		<p>View our all hand-picked camps from all over the world</p>
-		<a class="btn btn-primary" href="/campGrounds/new">add new campground</a>
+		<h1>Welcome to Bloggers <i class="far fa-bookmark"></i></h1>
+		<p>View our all hand-picked blogs from all over the world.</p>
+		<a class="btn btn-primary" href="/campGrounds/new">Add a new blog</a>
 	</header>
 	<div class="row text-center" style="display:flex; flex-wrap:wrap;">
 		<% for(var i = 0; i < campgrounds.length; i++) { %>
@@ -14,7 +14,7 @@
 					<div class="caption">
 						<%= campgrounds[i].name %>
 					</div>
-					<a href="/campGrounds/<%= campgrounds[i]._id%>" class="btn btn-primary">More Info...</a>
+					<a href="/campGrounds/<%= campgrounds[i]._id%>" class="btn btn-primary shortBtn">More Info...</a>
 				</div>
 			</div>
 		</li>

@@ -1,0 +1,29 @@
+.landingContainer {
+    height:100vh;
+    /*background-image: url("../resources/images/download.png");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*opacity: 0.4;*/
+}
+
+.navbar-default {
+    letter-spacing: 1.8px;
+}
+
+.landingContainer h1{
+    margin: 0;
+    color: #000;
+}
+
+.landingContainer a{
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.landingContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20%;
+    line-height: 50px;
+}

@@ -1,7 +1,5 @@
 var express     = require('express');
 var router      = express.Router();
-var CampGrounds = require('../models/campground');
-var Comment     = require('../models/comment');
 var User        = require('../models/user');
 var passport    = require('passport');
 
@@ -25,10 +23,10 @@ router.post('/register', function(req,res) {
             })
         }
     });
-})
+});
 
 router.get('/login', function(req,res) {
-        res.render('login.ejs');
+    res.render('login.ejs');
 });
 
 router.post('/login',passport.authenticate('local', {

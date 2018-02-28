@@ -24,7 +24,8 @@ router.post('/',isLoggedIn,  function(req,res) {
         {
             name:newName,
             image:newimage,
-            description: discreption
+            description: discreption,
+            likes : 0
         }, function(err, foundcampgrd){
             if(err){
                 console.log(err);
@@ -62,6 +63,7 @@ router.get('/:id/edit', checkOwnership, function(req,res) {
     });
 });
 
+//Update
 router.put('/:id', checkOwnership, function(req ,res) {
     console.log('reached' + req.params.id);
     CampGrounds.findByIdAndUpdate(req.params.id,
@@ -80,7 +82,6 @@ router.put('/:id', checkOwnership, function(req ,res) {
 });
 
 //destroy
-
 router.delete('/:id', checkOwnership, function(req, res) {
     CampGrounds.findByIdAndRemove(req.params.id, function(err) {
         if(err) {
